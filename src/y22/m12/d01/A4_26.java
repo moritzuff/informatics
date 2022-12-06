@@ -2,6 +2,8 @@ package y22.m12.d01;
 
 import java.util.Scanner;
 
+//Erstelle ein Programm, welches die Quersumme aus 4 Zahlen berechnet.
+
 public class A4_26 {
 
     public void berechneQuersumme() {
@@ -18,13 +20,13 @@ public class A4_26 {
                 zahl = Integer.parseInt(scanner.nextLine());
             // catch --> er fängt den Fehler ab und eine neue (richtige) Zahl kann eingegeben werden
             } catch (NumberFormatException e) {
-                System.out.println("Du kannst nur eine Zahl bis maximal 99999 eingeben!");
+                System.out.println("Du kannst nur eine Zahl bis maximal 9999 eingeben!");
                 continue;
             }
 
             // Abfragesystem, ob Zahl den Richtlinien entspricht
             if (zahl < 1 || zahl > 9999) {
-                System.out.println("Du kannst nur eine Zahl bis maximal 99999 eingeben!");
+                System.out.println("Du kannst nur eine Zahl bis maximal 9999 eingeben!");
                 continue;
             }
             break;
