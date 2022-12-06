@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class A4_26 {
 
     public void berechneQuersumme() {
-
+        //123
         // Scanner wird erstellt
         System.out.println("Gebe eine Zahl ein und die Quersumme wird berechnet: ");
         Scanner scanner = new Scanner(System.in);
