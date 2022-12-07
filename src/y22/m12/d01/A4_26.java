@@ -3,11 +3,9 @@ package y22.m12.d01;
 import java.util.Scanner;
 
 //Erstelle ein Programm, welches die Quersumme aus 4 Zahlen berechnet.
-
 public class A4_26 {
 
     public void berechneQuersumme() {
-        //123
         // Scanner wird erstellt
         System.out.println("Gebe eine Zahl ein und die Quersumme wird berechnet: ");
         Scanner scanner = new Scanner(System.in);
