@@ -1,0 +1,83 @@
+package y23.m01.d12;
+
+import java.util.Scanner;
+
+public class A4_35 {
+    private int t, m, j;
+    private String answer, weekday;
+    
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public String getWeekday() {
+        return weekday;
+    }
+
+    public void setWeekday(String weekday) {
+        this.weekday = weekday;
+    }
+    
+    public void getWochentag() {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Tag: ");
+        t = Integer.parseInt(scanner.nextLine());
+        
+        System.out.println("Monat: ");
+        m = Integer.parseInt(scanner.nextLine());
+        int oldM = m;
+        
+        System.out.println("Jahr: ");
+        j = Integer.parseInt(scanner.nextLine());
+        int oldJ = j;
+        
+        if (m <= 2) {
+            m = m+10;
+            j = j-1;
+        } else {
+            m = m-2;
+        }
+        
+        int c = j/100;
+        int y = j % 100;
+        int h = (((26 * m - 2) / 10) + t + y + y / 4 + c / 4 - 2 * c) % 7;
+        
+        if (h < 0) {
+            h = h+7;
+        }
+        
+        switch (h) {
+            case 0:
+                this.setWeekday("Sonntag");
+                break;
+            case 1:
+                this.setWeekday("Montag");
+                break;
+            case 2:
+                this.setWeekday("Dienstag");
+                break;
+            case 3:
+                this.setWeekday("Mittwoch");
+                break;
+            case 4:
+                this.setWeekday("Donnerstag");
+                break;
+            case 5:
+                this.setWeekday("Freitag");
+                break;
+            case 6:
+                this.setWeekday("Samstag");
+                break;
+            }
+        answer = "Der " + t + "." + oldM + "." + oldJ + " ist ein " + weekday;
+        System.out.println(answer);
+}
+
+    
+           
+}
