@@ -7,11 +7,11 @@ public class Fachbereich {
     
     private Vorlesung vorlesung;
 
-    public Fachbereich(String fachbereichName, int fachbereichAnzahlVorlesungen, int fachbereichNummer, Vorlesung vorlesung) {
+    public Fachbereich(String fachbereichName, int fachbereichAnzahlVorlesungen, int fachbereichNummer) {
         this.fachbereichName = fachbereichName;
         this.fachbereichAnzahlVorlesungen = fachbereichAnzahlVorlesungen;
         this.fachbereichNummer = fachbereichNummer;
-        this.vorlesung = vorlesung;
+        this.vorlesung = new Vorlesung(fachbereichNummer, fachbereichName);
     }
 
     public String getFachbereichName() {
@@ -37,5 +37,12 @@ public class Fachbereich {
     public void setFachbereichNummer(int fachbereichNummer) {
         this.fachbereichNummer = fachbereichNummer;
     }
+
+    @Override
+    public String toString() {
+        return "Fachbereich{" + "fachbereichName=" + fachbereichName + ", fachbereichAnzahlVorlesungen=" + fachbereichAnzahlVorlesungen + ", fachbereichNummer=" + fachbereichNummer + ", vorlesung=" + vorlesung + '}';
+    }
+    
+    
     
 }
