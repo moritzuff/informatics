@@ -7,7 +7,7 @@ public class Fachbereich {
     
     private Vorlesung vorlesung;
 
-    public Fachbereich(String fachbereichName, int fachbereichAnzahlVorlesungen, int fachbereichNummer) {
+    public Fachbereich(String fachbereichName, int fachbereichAnzahlVorlesungen, int fachbereichNummer, Vorlesung vorlesung) {
         this.fachbereichName = fachbereichName;
         this.fachbereichAnzahlVorlesungen = fachbereichAnzahlVorlesungen;
         this.fachbereichNummer = fachbereichNummer;

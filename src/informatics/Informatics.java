@@ -10,8 +10,7 @@ public class Informatics {
     public static void main(String[] args) {
         //new A4_26().berechneQuersumme();
         //new A4_35().getWochentag();
-        Fachbereich wirtschaftsinformatik = new Fachbereich("wirtschaftsinformatik", 1, 101);
-        Vorlesung einfuehrung = new Vorlesung(1, "Einführung in die Informatik", wirtschaftsinformatik);
+        
     }
     
     
