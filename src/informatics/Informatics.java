@@ -3,6 +3,7 @@ package informatics;
 import java.util.Scanner;
 import y22.m12.d01.A4_26;
 import y23.m01.d12.A4_35;
+import y23.m01.d12.A4_36;
 import y23.m01.d19.Fachbereich;
 import y23.m01.d19.Vorlesung;
 
@@ -10,11 +11,14 @@ public class Informatics {
 
     public static void main(String[] args) {
         
+        //new A4_35().getWochentag();
+        new A4_36().getOstersonntag();
+        
         /*
         Fachbereich powi = new Fachbereich("Politikwissenschaften", 2, 001);
         Vorlesung einstieg = new Vorlesung(001, "Einstieg Politikwissenschaften");
         Vorlesung staatsformen = new Vorlesung(002, "Staatsformen");
-       */
+       
         
         
         Scanner s = new Scanner(System.in);
@@ -46,6 +50,8 @@ public class Informatics {
         System.out.println(fachbereich);
         System.out.println(vorlesung);
         System.out.println(vorlesung1);
+
+*/
         
         
         

@@ -3,9 +3,12 @@ package y23.m01.d12;
 import java.util.Scanner;
 
 public class A4_35 {
+    
+    //Variablen werden erstellt
     private int t, m, j;
     private String answer, weekday;
     
+    //Get- und Set-Methoden
     public String getAnswer() {
         return answer;
     }
@@ -22,9 +25,12 @@ public class A4_35 {
         this.weekday = weekday;
     }
     
+    //Methode, die später in der Main-Methode ausgeführt wird
     public void getWochentag() {
+        //Scanner wird erstellt
         Scanner scanner = new Scanner(System.in);
         
+        //Eingabe des Datums durch den Nutzer
         System.out.println("Tag: ");
         t = Integer.parseInt(scanner.nextLine());
         
@@ -34,8 +40,11 @@ public class A4_35 {
         
         System.out.println("Jahr: ");
         j = Integer.parseInt(scanner.nextLine());
+        //eingegebenes Jahr wird auf einer neuen Variable gespeichert, 
+        //damit in der Antwort nicht die Variable j ausgegeben wird, da diese ja schon verfälscht ist
         int oldJ = j;
         
+        //Algorithmus (vorgegeben)
         if (m <= 2) {
             m = m+10;
             j = j-1;
@@ -51,6 +60,7 @@ public class A4_35 {
             h = h+7;
         }
         
+        //Abfrage der Variable h und welchem Wochentag sie entspricht
         switch (h) {
             case 0:
                 this.setWeekday("Sonntag");
@@ -74,6 +84,7 @@ public class A4_35 {
                 this.setWeekday("Samstag");
                 break;
             }
+        //Antwort
         answer = "Der " + t + "." + oldM + "." + oldJ + " ist ein " + weekday;
         System.out.println(answer);
 }
