@@ -6,20 +6,27 @@ import y23.m01.d12.A4_35;
 import y23.m01.d12.A4_36;
 import y23.m01.d19.Fachbereich;
 import y23.m01.d19.Vorlesung;
+import y23.m01.d26.*;
 
 public class Informatics {
 
     public static void main(String[] args) {
-
+        
+        
         //new A4_35().getWochentag();
         //new A4_36().getOstersonntag();
+        
+        /*
         Fachbereich powi = new Fachbereich("Politikwissenschaften", 2, 001);
         
         Vorlesung vorles1 = new Vorlesung(0, "Gzuz");
         Vorlesung vorles2 = new Vorlesung(1, "CL500");
         
+       
         powi.setV1(vorles1);
         powi.setV2(vorles2);
+        */
+        
         /*
         Scanner s = new Scanner(System.in);
         
