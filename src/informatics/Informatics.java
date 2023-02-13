@@ -7,12 +7,13 @@ import y23.m01.d12.A4_36;
 import y23.m01.d19.Fachbereich;
 import y23.m01.d19.Vorlesung;
 import y23.m01.d26.*;
+import y23.m02.d13.ArrayTestPrimitiveDatentypen;
 
 public class Informatics {
 
     public static void main(String[] args) {
         
-        
+        new ArrayTestPrimitiveDatentypen();
         //new A4_35().getWochentag();
         //new A4_36().getOstersonntag();
         
