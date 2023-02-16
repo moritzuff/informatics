@@ -1,5 +1,6 @@
 package informatics;
 
+import java.io.IOException;
 import java.util.Scanner;
 import y22.m12.d01.A4_26;
 import y23.m01.d12.A4_35;
@@ -8,12 +9,14 @@ import y23.m01.d19.Fachbereich;
 import y23.m01.d19.Vorlesung;
 import y23.m01.d26.*;
 import y23.m02.d13.ArrayTestPrimitiveDatentypen;
+import y23.m02.d16.MitarbeiterArrayTest;
 
 public class Informatics {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        new ArrayTestPrimitiveDatentypen();
+        new MitarbeiterArrayTest();
+        //new ArrayTestPrimitiveDatentypen();
         //new A4_35().getWochentag();
         //new A4_36().getOstersonntag();
         
