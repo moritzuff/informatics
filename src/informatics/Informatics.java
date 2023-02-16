@@ -10,12 +10,17 @@ import y23.m01.d19.Vorlesung;
 import y23.m01.d26.*;
 import y23.m02.d13.ArrayTestPrimitiveDatentypen;
 import y23.m02.d16.MitarbeiterArrayTest;
+import y23.m02.d16.svheidelburg.Schwimmbad;
+import y23.m02.d16.svheidelburg.Sportstaette;
 
 public class Informatics {
 
     public static void main(String[] args) throws IOException {
         
-        new MitarbeiterArrayTest();
+        Sportstaette hallenbadHeek = new Schwimmbad(100, 0.5);
+        System.out.println("Grundgebühr: " + hallenbadHeek.gibGrundgebuehr());
+        System.out.println("Gesamtgebühr: " + hallenbadHeek.gibGesamtgebuehr());
+        //new MitarbeiterArrayTest();
         //new ArrayTestPrimitiveDatentypen();
         //new A4_35().getWochentag();
         //new A4_36().getOstersonntag();
