@@ -12,14 +12,20 @@ import y23.m02.d13.ArrayTestPrimitiveDatentypen;
 import y23.m02.d16.MitarbeiterArrayTest;
 import y23.m02.d16.svheidelburg.Schwimmbad;
 import y23.m02.d16.svheidelburg.Sportstaette;
+import y23.m02.d26.ArbeitsblattZu270223;
 
 public class Informatics {
 
     public static void main(String[] args) throws IOException {
         
-        Sportstaette hallenbadHeek = new Schwimmbad(100, 0.5);
-        System.out.println("Grundgebühr: " + hallenbadHeek.gibGrundgebuehr());
-        System.out.println("Gesamtgebühr: " + hallenbadHeek.gibGesamtgebuehr());
+        
+        //new ArbeitsblattZu270223().arrayEinsBisZwanzig();
+        //new ArbeitsblattZu270223().wetterstation();
+        new ArbeitsblattZu270223().mehrdimensionalerArray();
+        
+        //Sportstaette hallenbadHeek = new Schwimmbad(100, 0.5);
+        //System.out.println("Grundgebühr: " + hallenbadHeek.gibGrundgebuehr());
+        //System.out.println("Gesamtgebühr: " + hallenbadHeek.gibGesamtgebuehr());
         //new MitarbeiterArrayTest();
         //new ArrayTestPrimitiveDatentypen();
         //new A4_35().getWochentag();
