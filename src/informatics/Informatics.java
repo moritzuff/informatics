@@ -20,8 +20,8 @@ public class Informatics {
         
         
         //new ArbeitsblattZu270223().arrayEinsBisZwanzig();
-        //new ArbeitsblattZu270223().wetterstation();
-        new ArbeitsblattZu270223().mehrdimensionalerArray();
+        new ArbeitsblattZu270223().wetterstation();
+        //new ArbeitsblattZu270223().mehrdimensionalerArray();
         
         //Sportstaette hallenbadHeek = new Schwimmbad(100, 0.5);
         //System.out.println("Grundgebühr: " + hallenbadHeek.gibGrundgebuehr());
