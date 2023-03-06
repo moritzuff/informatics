@@ -2,6 +2,7 @@ package y23.m03.d02;
 
 import java.util.Scanner;
 
+//TODO: Zweites Ass ungültig machen // 1 machen
 public class BlackJack {
 
     Scanner scanner = new Scanner(System.in);
@@ -12,8 +13,9 @@ public class BlackJack {
     int dealerPoints = 0;
 
     int maximum = cards.length;
-    
+
     boolean state = true;
+    boolean dealerState = true;
 
     private int getNumber() {
         return (int) (maximum * Math.random());
@@ -45,23 +47,43 @@ public class BlackJack {
                 break;
         }
     }
-    
+
     private void croupier() {
-        int twoCroupier = getNumber();
-        System.out.println("CROUPIER: Zweite Karte des Croupier: " + cards[twoCroupier]);
-        dealerPoints += points[twoCroupier];
+
         if (dealerPoints == 21) {
             System.out.println("SPIEL: Die Punktzahl des Croupiers ist 21, damit hast du verloren!");
         } else if (dealerPoints > 16) {
+
+        } else {
+
+        }
+
+    }
+
+    private void addDealerCard() {
+
+        int t = getNumber();
+        System.out.println("CROUPIER: Weitere Karte: " + cards[t]);
+        dealerPoints += points[t];
+
+        if (dealerPoints == 21) {
+            System.out.println("SPIEL: Der Croupier hat 21 Punkte, damit hast du verloren!");
+            dealerState = false;
+        } else if (dealerPoints > 21) {
+            System.out.println("SPIEL: Der Dealer hat " + dealerPoints + " ,damit hast du gewonnnen!");
+            dealerState = false;
+        } else if (dealerPoints >= 17) {
             if (dealerPoints > playerPoints) {
                 System.out.println("SPIEL: Der Croupier hat " + dealerPoints + " Punkte und du hast nur " + playerPoints + " Punkte, damit hast du verloren!");
+            } else if (dealerPoints == playerPoints){
+                System.out.println("SPIEL: Der Croupier hat " + dealerPoints + " Punkte und du hast " + playerPoints + " Punkte, damit ist es ein Nullspiel!");
+                dealerState = false;
             } else {
-                System.out.println("SPIEL: Der Croupier hat nur " + dealerPoints + " Punkte und du hast" + playerPoints + " Punkte, damit hast du gewonnen!");
+                System.out.println("SPIEL: Der Croupier hat nur " + dealerPoints + " Punkte und du hast " + playerPoints + " Punkte, damit hast du gewonnen!");
+                dealerState = false; 
             }
-        } else {
             
         }
-        
     }
 
     public void startBlackJack() {
@@ -80,8 +102,15 @@ public class BlackJack {
         while (state) {
             addCard();
         }
-        
-        croupier();
 
+        if (playerPoints < 21) {
+            int twoCroupier = getNumber();
+            dealerPoints += points[twoCroupier];
+            System.out.println("CROUPIER: Zweite Karte des Croupier: " + cards[twoCroupier]);
+            System.out.println("CROUPIER: Punkte des Croupier: " + dealerPoints);
+            while (dealerState) {
+                addDealerCard();
+            }
+        }
     }
 }
