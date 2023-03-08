@@ -17,12 +17,13 @@ import y23.m02.d26.ArbeitsblattZu270223;
 public class Informatics {
 
     public static void main(String[] args) throws IOException {
+
+        //Black Jack
         new y23.m03.d02.BlackJack().startBlackJack();
-        
+           
         //new ArbeitsblattZu270223().arrayEinsBisZwanzig();
         //new ArbeitsblattZu270223().wetterstation();
         //new ArbeitsblattZu270223().mehrdimensionalerArray();
-        
         //Sportstaette hallenbadHeek = new Schwimmbad(100, 0.5);
         //System.out.println("Grundgebühr: " + hallenbadHeek.gibGrundgebuehr());
         //System.out.println("Gesamtgebühr: " + hallenbadHeek.gibGesamtgebuehr());
@@ -30,7 +31,6 @@ public class Informatics {
         //new ArrayTestPrimitiveDatentypen();
         //new A4_35().getWochentag();
         //new A4_36().getOstersonntag();
-        
         /*
         Fachbereich powi = new Fachbereich("Politikwissenschaften", 2, 001);
         
@@ -40,9 +40,8 @@ public class Informatics {
        
         powi.setV1(vorles1);
         powi.setV2(vorles2);
-        */
-        
-        /*
+         */
+ /*
         Scanner s = new Scanner(System.in);
         
         System.out.println("Name des Fachbereich: ");
