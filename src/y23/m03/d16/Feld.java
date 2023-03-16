@@ -30,7 +30,4 @@ public class Feld {
     public String toString() {
         return "Feld{" + "name=" + name + ", feldID=" + feldID + '}';
     }
-    
-    
-
 }
