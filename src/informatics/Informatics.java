@@ -13,13 +13,19 @@ import y23.m02.d16.MitarbeiterArrayTest;
 import y23.m02.d16.svheidelburg.Schwimmbad;
 import y23.m02.d16.svheidelburg.Sportstaette;
 import y23.m02.d26.ArbeitsblattZu270223;
+import y23.m03.d16.*;
 
 public class Informatics {
 
     public static void main(String[] args) throws IOException {
-
+        
+        //Sportplatz
+        SportplatzVerwaltung gemeindeheek = new SportplatzVerwaltung();
+        System.out.println(gemeindeheek.getSportplatz(0));
+  
+        
         //Black Jack
-        new y23.m03.d02.BlackJack().startBlackJack();
+        //new y23.m03.d02.BlackJack().startBlackJack();
            
         //new ArbeitsblattZu270223().arrayEinsBisZwanzig();
         //new ArbeitsblattZu270223().wetterstation();
