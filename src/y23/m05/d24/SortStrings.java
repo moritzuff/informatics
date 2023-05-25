@@ -1,5 +1,7 @@
 package y23.m05.d24;
 
+import java.util.Scanner;
+
 public class SortStrings {
     
     public static void sortArrays(Person[] personen) {
@@ -38,6 +40,7 @@ public class SortStrings {
         String namenResult = sb.toString();
         String[] ausgabe = namenResult.split(", ");
         
+        System.out.println("Sortierte Liste wird geladen..");
         for (String string : ausgabe) {
             System.out.println(string);
         }
@@ -45,13 +48,21 @@ public class SortStrings {
     }
     
     public static void main(String[] args) {
-        Person p1 = new Person("Hamann", "Lotte");
-        Person p2 = new Person("Bendfeld", "Moritz");
-        Person p3 = new Person("Schwering", "Mattis");
-        Person p4 = new Person("Bendfeld", "Jonathan");
-        Person p5 = new Person("Küper", "Fabian");
+        Scanner s = new Scanner(System.in);
         
-        Person[] personen = {p1, p2, p3, p4, p5};
+        System.out.println("Wie viele Personen wollen Sie erstellen?");
+        int x = Integer.parseInt(s.nextLine());
+        Person[] personen = new Person[x];
+        
+        for (int i = 0; i < x; i++) {
+            System.out.println("Nachname: ");
+            String nachname = s.nextLine();
+            System.out.println("Vorname: ");
+            String vorname = s.nextLine();
+            personen[i] = new Person(nachname, vorname);
+            System.out.println("Die Person " + nachname + " " + vorname + " wurde erstellt.");
+        }
+        
         sortArrays(personen);
     }
     
