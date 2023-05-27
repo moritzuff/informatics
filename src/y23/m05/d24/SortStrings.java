@@ -51,19 +51,45 @@ public class SortStrings {
         Scanner s = new Scanner(System.in);
         
         System.out.println("Wie viele Personen wollen Sie erstellen?");
-        int x = Integer.parseInt(s.nextLine());
+        int x = 0;
+        try {
+            x = Integer.parseInt(s.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Du kannst nur eine Zahl eingeben.");
+            main(args);
+            return;
+        }
+
         Person[] personen = new Person[x];
         
         for (int i = 0; i < x; i++) {
-            System.out.println("Nachname: ");
-            String nachname = s.nextLine();
-            System.out.println("Vorname: ");
-            String vorname = s.nextLine();
+            String nachname =  nachnameAbfrage(s);
+            String vorname = vornameAbfrage(s);
             personen[i] = new Person(nachname, vorname);
             System.out.println("Die Person " + nachname + " " + vorname + " wurde erstellt.");
         }
         
         sortArrays(personen);
+    }
+
+    private static String nachnameAbfrage(Scanner s) {
+        System.out.println("Nachname:");
+        String nachname = s.nextLine();
+
+        if (nachname.isEmpty()) {
+            return nachnameAbfrage(s);
+        }
+        return nachname;
+    }
+
+    private static String vornameAbfrage(Scanner s) {
+        System.out.println("Vorname:");
+        String vorname = s.nextLine();
+
+        if (vorname.isEmpty()) {
+            return vornameAbfrage(s);
+        }
+        return vorname;
     }
     
     
