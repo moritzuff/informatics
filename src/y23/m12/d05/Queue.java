@@ -4,6 +4,8 @@ public class Queue<ContentType> {
 
     private class QueueNode {
         
+        //Diese zwei Variablen und dann einfach Set- und Get-Methoden für nextNode und eine Get-Methiode für content
+        //Konstruktor nicht vergessen
         private ContentType content = null;
         private QueueNode nextNode = null;
 
